@@ -1,0 +1,6 @@
+<h2><%= @recipe.title %></h2>
+<p><%= @recipe.description %></p>
+
+<%= link_to("back", root_path, class: "btn btn-default")%>
+<%= link_to("编辑", edit_recipe_path, class: "btn btn-default")%>
+<%= link_to("删除", recipe_path, method: :delete,data: {confirm: "你确定要删除吗？"}, class: "btn btn-default")%>
