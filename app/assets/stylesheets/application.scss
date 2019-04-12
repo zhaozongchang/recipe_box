@@ -16,3 +16,9 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ //让表单居中显示
+ .col-centered {
+  float: none;
+  margin: 0 auto;
+}
