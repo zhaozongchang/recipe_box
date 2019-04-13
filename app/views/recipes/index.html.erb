@@ -1,4 +1,14 @@
-<% @recipes.each do |recipe| %>
-<h2><%= link_to(recipe.title, recipe_path(recipe))%></h2>
-<p><%= recipe.description%></p>
-<% end %>
+<div class="container">
+  <% @recipes.each do |recipe| %>
+    <div class="col-xs-6 col-md-4">
+      <div class="recipe">
+        <%= link_to recipe_path(recipe) do %>
+          <%= image_tag recipe.image.url(:medium)%>
+        <% end %>
+        <h2><%= link_to(recipe.title, recipe_path(recipe))%></h2>
+        <p><%= recipe.description%></p>
+      </div>
+      </div>
+
+  <% end %>
+</div>
